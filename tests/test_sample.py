@@ -10,3 +10,6 @@ def test_validVPM10():
 def test_validVPM20():
     assert isVPMValid(20) == True
 
+def test_validVPM30():
+    assert isVPMValid(30) == True
+
