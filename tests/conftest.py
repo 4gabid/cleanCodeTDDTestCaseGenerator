@@ -9,3 +9,7 @@ def add_src_to_path():
 @pytest.fixture(scope='module')
 def valid_vpms():
     return [10, 20, 40, 50, 60, 70]
+
+@pytest.fixture(scope='module')
+def invalid_vpms():
+    return [80, 30, "VPM10", "VPM20", "abc", "@#$%", 10.5, None]
