@@ -7,3 +7,6 @@ from JamaTestCaseGenerator import isVPMValid
 def test_validVPM10():
     assert isVPMValid(10) == True
 
+def test_validVPM20():
+    assert isVPMValid(20) == True
+
