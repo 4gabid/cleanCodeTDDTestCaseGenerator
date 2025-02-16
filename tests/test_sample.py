@@ -2,7 +2,8 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from JamaTestCaseGenerator import validateVPM
+from JamaTestCaseGenerator import isVPMValid
 
 def test_validVPM10():
-    assert validateVPM(10) == True
+    assert isVPMValid(10) == True
+
