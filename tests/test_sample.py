@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from sample import add
+from JamaTestCaseGenerator import validateVPM
 
-def test_hello_world():
-    assert add(1, 1) == 2
+def test_validVPM():
+    assert validateVPM() == True
