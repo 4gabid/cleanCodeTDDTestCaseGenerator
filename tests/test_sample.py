@@ -1,8 +1,11 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+import pytest
+from JamaTestCaseGenerator import isVPMValid
 
-from sample import add
+@pytest.mark.parametrize("value", pytest.lazy_fixture('valid_vpms'))
+def test_validVPM(value):
+    assert isVPMValid(value) == True
 
-def test_hello_world():
-    assert add(1, 1) == 2
+@pytest.mark.parametrize("value", pytest.lazy_fixture('invalid_vpms'))
+def test_invalidVPM(value):
+    assert isVPMValid(value) == False
+
